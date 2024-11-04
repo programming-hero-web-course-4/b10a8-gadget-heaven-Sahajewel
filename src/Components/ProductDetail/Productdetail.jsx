@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CiStar } from "react-icons/ci";
 import { GiEternalLove } from "react-icons/gi";
 import { NavLink } from 'react-router-dom';
 import Dash from '../Dash/Dash';
 
 export default function Productdetail({detail}) {
+ console.log(detail)
+  
     const {product_image,product_title,price,specification,rating,description,product_id} = detail || {}
   
   return (
@@ -19,13 +21,13 @@ export default function Productdetail({detail}) {
         <p className='text-white'>{description}</p>
         <h1 className='text-white mt-5 text-2xl font-bold'>Specification</h1>
        <div className='my-5'>
-       {/* <ul>
+       <ul>
         {
-        specification.map((spec, index) => (
-          <li key={index}>{spec}</li>
+       specification && specification.map((spec, index) => (
+          <li className="text-white list-disc" key={index}>{spec}</li>
         ))
         }
-      </ul> */}
+      </ul>
        </div>
        <h1 className='text-white font-bold text-2xl'>Rating</h1>
        <div className='flex  my-3 items-center'>
@@ -41,7 +43,7 @@ export default function Productdetail({detail}) {
             </div>
        </div>
        <div className='flex items-center'>
-        <NavLink to={`/dash/${product_id}`}  className='bg-purple-500 rounded-3xl px-5 py-2 text-white mr-3 text-xl hover:scale-110 duration-200'>Add To Card</NavLink>
+        <NavLink   to={`/dash/${product_id}`}  className='bg-purple-500 rounded-3xl px-5 py-2 text-white mr-3 text-xl hover:scale-110 duration-200'>Add To Card</NavLink>
         <div className='text-3xl border p-3 rounded-full text-white'>
         <GiEternalLove />
         </div>

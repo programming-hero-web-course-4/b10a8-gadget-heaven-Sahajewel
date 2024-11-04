@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { FaCartArrowDown } from "react-icons/fa";
 import { RiDislikeFill } from "react-icons/ri";
 // import image from "./banner.jpg"
 export default function Header() {
+  // const handleCart = ()=>{
+  //   const [countCart, setCountCart] = useState(0)
+  //   setCountCart(countCart= countCart+1)
+  // }
   const navigate = useNavigate()
   return (
 
@@ -50,8 +54,13 @@ export default function Header() {
                 </ul>
               </div>
               <div className="navbar-end">
-                <a className="btn mr-4"><FaCartArrowDown /></a>
-                <a className="btn mr-7"><RiDislikeFill /></a>
+                <a className="btn mr-4 relative">
+                  <FaCartArrowDown />
+                  <span className='absolute top-0 right-0 text-red-400'>0</span></a>
+                <a className="btn mr-7 flex relative">
+                  <RiDislikeFill />
+                  <span className='absolute top-0 right-0 text-red-400'>0</span>
+                  </a>
               </div>
             </div>
 
