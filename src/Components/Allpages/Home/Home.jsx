@@ -1,9 +1,25 @@
 import React from 'react'
+import { Outlet, useLoaderData } from 'react-router-dom'
+import Category from '../../Category/Category'
+import Banner from '../../Banner/Banner';
+import Header from '../../Header/Header';
 
 export default function Home() {
+    const categories = useLoaderData();
+   
   return (
    <div>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolor laborum vel, sed laudantium blanditiis porro qui placeat sit nisi molestiae, non neque repellendus officia expedita accusamus cupiditate. Quisquam voluptas nisi necessitatibus, animi at quibusdam voluptates, dolorum, exercitationem ullam aut itaque incidunt. Voluptate eos fugiat quibusdam possimus accusamus quod, vel amet perferendis nobis veniam repudiandae quis error praesentium unde, beatae iste, illo quaerat rem tempora? Ipsa quas quia exercitationem impedit, error dolore nesciunt. Quisquam totam debitis ducimus obcaecati magni illum, accusantium, dolore facilis placeat, enim dolorem exercitationem commodi optio. Suscipit aspernatur maxime magni alias a! Sed quia dolores consequatur quos.
+    <div className='bg-purple-500'>
+      <Header></Header>
+    </div>
+   <div className='bg-purple-500'>
+      <Banner></Banner>
+   </div>
+    <h1 className='text-center text-lg md:text-2xl lg:text-4xl font-bold my-5'>Explore Cutting Edge Gadget</h1>
+   {
+    categories.map(cate=><Category key={cate.id} displayCate={cate}></Category>)
+   }
+   <Outlet></Outlet>
    </div>
   )
 }

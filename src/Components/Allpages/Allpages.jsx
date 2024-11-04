@@ -7,8 +7,10 @@ import Footer from '../Footer/Footer'
 export default function Allpages() {
   return (
     <div>
-           <Header></Header>
-           <Outlet></Outlet>
+           {/* <Header></Header> */}
+          <div className='min-h-[calc(100vh - 200px)]'>
+          <Outlet></Outlet>
+          </div>
            <Footer></Footer>
     </div>
   )

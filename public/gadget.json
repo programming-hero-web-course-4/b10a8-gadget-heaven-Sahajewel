@@ -1,0 +1,102 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Laptop Pro X",
+      "product_image": "https://i.ibb.co/rf99RKn/Laptop-computer.webp",
+      "category": "computers",
+      "price": 1299.99,
+      "description": "A high-performance laptop with a sleek design and powerful features for professionals.",
+      "specification": ["16GB RAM", "512GB SSD", "Intel Core i7", "15-inch Display"],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Smartphone XZ",
+      "product_image": "https://i.ibb.co/qF6y8R7/smartphone-2048px-1013.webp",
+      "category": "phones",
+      "price": 799.99,
+      "description": "A top-of-the-line smartphone with a stunning display and advanced camera features.",
+      "specification": ["6.5-inch Display", "128GB Storage", "48MP Camera", "5G Connectivity"],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Smartwatch Pro",
+      "product_image": "https://i.ibb.co/NW40gXB/Rolex.webp",
+      "category": "smart-watchs",
+      "price": 249.99,
+      "description": "A versatile smartwatch with health tracking, notifications, and a long-lasting battery.",
+      "specification": ["Heart Rate Monitor", "GPS", "Water Resistant", "1.4-inch Display"],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P004",
+      "product_title": "Universal Charger",
+      "product_image": "https://i.ibb.co/R7NGzvz/41-MAl-BJ6-Bh-L-AC-UF1000-1000-QL80.jpg",
+      "category": "chargers",
+      "price": 29.99,
+      "description": "A fast-charging adapter compatible with most devices, including laptops and phones.",
+      "specification": ["USB-C and USB-A Ports", "60W Output", "Compact Design", "Overcharge Protection"],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Portable Powerbank 10000mAh",
+      "product_image": "https://i.ibb.co/qFQ5W0S/images-1.jpg",
+      "category": "powerbanks",
+      "price": 39.99,
+      "description": "A compact and high-capacity powerbank to keep your devices charged on the go.",
+      "specification": ["10000mAh Capacity", "Dual USB Output", "LED Indicator", "Fast Charging"],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Gaming Laptop Ultra",
+      "product_image": "https://i.ibb.co/qkvC0W0/71h6-Pp-Gaz9-L.jpg",
+      "category": "computers",
+      "price": 1799.99,
+      "description": "A powerful gaming laptop with high-end graphics and advanced cooling.",
+      "specification": ["32GB RAM", "1TB SSD", "NVIDIA GeForce RTX 3070", "17-inch Display"],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P007",
+      "product_title": "Smartphone Mini",
+      "product_image": "https://i.ibb.co/CVKZdKn/images-2.jpg",
+      "category": "phones",
+      "price": 499.99,
+      "description": "A compact smartphone with essential features and great battery life.",
+      "specification": ["5.5-inch Display", "64GB Storage", "12MP Camera", "4G Connectivity"],
+      "availability": true,
+      "rating": 4.2
+    },
+    {
+      "product_id": "P008",
+      "product_title": "Wireless Charging Pad",
+      "product_image": "https://i.ibb.co/6YCSF2S/51p-VVSNn-V4-S-AC-UF1000-1000-QL80.jpg",
+      "category": "chargers",
+      "price": 19.99,
+      "description": "A convenient wireless charging pad compatible with all Qi-enabled devices.",
+      "specification": ["10W Output", "Anti-Slip Design", "LED Indicator", "Overheating Protection"],
+      "availability": false,
+      "rating": 4.1
+    },
+    {
+      "product_id": "P009",
+      "product_title": "Powerbank 20000mAh",
+      "product_image": "https://i.ibb.co/MBT8Bs0/images-3.jpg",
+      "category": "powerbanks",
+      "price": 59.99,
+      "description": "A high-capacity powerbank ideal for extended trips and heavy use.",
+      "specification": ["20000mAh Capacity", "USB-C and USB-A Ports", "Fast Charging", "LED Flashlight"],
+      "availability": true,
+      "rating": 4.6
+    }
+  ]
+  

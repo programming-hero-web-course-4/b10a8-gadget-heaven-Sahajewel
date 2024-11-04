@@ -1,15 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { FaCartArrowDown } from "react-icons/fa";
 import { RiDislikeFill } from "react-icons/ri";
 // import image from "./banner.jpg"
 export default function Header() {
+  const navigate = useNavigate()
   return (
 
     
   <div>
-     <div className='bg-[#9538E2] min-h-[580px] mb-20 rounded-2xl mx-10 relative' >
-        <div>
+    
+      
             <div className="navbar py-5 ">
               <div className="navbar-start">
                 <div className="dropdown">
@@ -37,7 +38,7 @@ export default function Header() {
                   
                   </ul>
                 </div>
-                <a className="text-md md:text-lg lg:text-2xl font-bold  text-white pl-4">Gadget Heaven</a>
+                <a className="text-md md:text-lg lg:text-2xl font-bold  text-green-500 pl-4">Gadget Heaven</a>
               </div>
               <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -53,25 +54,14 @@ export default function Header() {
                 <a className="btn mr-7"><RiDislikeFill /></a>
               </div>
             </div>
-            <div className="hero  text-center ">
+
             
-                <div>
-                
-                <div className="w-8/12 mx-auto py-10">
-                  <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white ">Hello thereUpgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
-                  <p className="py-6 text-white">
-                    Explore the latest gadget that will take your experience to the next level. From smart dvices to the coolest accessories, we have it all!
-                  </p>
-                  <button className="btn btn-success text-white text-lg">Shop Now</button>
-                </div>
-                </div>
-            </div>
            
-        </div>
+  
         {/* <div className='w-7/12 mx-auto absolute  left-0 right-0 border p-10 rounded-xl '>
               <img className='w-full rounded-2xl ' src={image} alt="" />
            </div> */}
-     </div>
+  
     
   </div>
   )
