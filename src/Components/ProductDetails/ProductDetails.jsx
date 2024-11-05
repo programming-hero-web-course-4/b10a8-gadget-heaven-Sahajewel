@@ -18,7 +18,7 @@ export default function ProductDetails() {
     <div>
       <Header></Header>
     </div>
-    <div className='bg-purple-500'>
+    <div className='bg-purple-500 pb-[400px] mb-[200px]'>
        <div className="hero  text-center ">
             
             <div>
@@ -33,7 +33,7 @@ export default function ProductDetails() {
             </div>
    </div>
     </div>
-     <div>
+     <div className='absolute top-[300px] mx-auto '>
       {
         <Productdetail detail={detail}></Productdetail>
       }

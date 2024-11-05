@@ -1,10 +1,13 @@
 import React from 'react'
 import Header from '../../Header/Header'
-import Banner from '../../Banner/Banner'
+import { Helmet } from 'react-helmet'
 
 export default function Statistics() {
   return (
     <div>
+       <Helmet>
+       <title>Statistics</title>
+     </Helmet>
       <Header></Header>
       <div className='bg-purple-500'>
        <div className="hero  text-center ">
@@ -21,6 +24,8 @@ export default function Statistics() {
             </div>
    </div>
     </div>
+
+    <h1 className='text-center text-5xl text-purple-500 my-20 font-bold'>No Data found</h1>
     </div>
   )
 }

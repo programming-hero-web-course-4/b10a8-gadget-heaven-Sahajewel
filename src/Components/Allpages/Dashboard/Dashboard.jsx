@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import Header from '../../Header/Header'
-import { NavLink } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
-export default function Dashboard({dash}) {
+export default function Dashboard() {
+
+  
 const [display, setDisplay] = useState("cart")
 const showCart= ()=>{
   setDisplay("cart")
@@ -13,6 +15,9 @@ const showWishlist = ()=>{
 
   return (
     <div>
+     <Helmet>
+       <title>Dashboard</title>
+     </Helmet>
      <Header></Header>
      <div className='bg-purple-500'>
      <div className="hero  text-center ">
@@ -39,30 +44,16 @@ const showWishlist = ()=>{
         ): <h2 className='text-3xl font-bold mt-5'>Wishlist</h2>
       }
      </div>
-     <div className='flex justify-between bg-gray-400 w-10/12 mx-auto p-8 items-center overflow-hidden'>
-     
-    <div className='flex'>
-    <div className='mr-5 w-2/12'>
-        {
-          <img className='w-full h-full bg-black p-2 rounded-2xl' src={dash?.product_image} alt="" />
-        }
-      </div>
-      <div className='w-6/10 text-white'>
-          {
-            <h1 className='text-2xl mb-2 font-bold'>{dash?.product_title}</h1>
-            
-          }
-          {
-            <p className='pb-2 text-lg'>{dash?.description}</p>
-          }
-          {
-            <p className='pb-3'>{dash?.price}</p>
-          }
-          <button className='bg-purple-500 px-5 py-3 rounded-3xl hover:bg-purple-400 duration-300'>Add</button>
-      </div>
-    </div>
-      <div className='text-white text-xl cursor-pointer bg-purple-500 px-4 py-2 rounded-3xl hover:bg-purple-400 duration-200'>Delete</div>
+     <div className='flex justify-between items-center'>
+             <div>
+              </div>    
+              <div className='flex justify-between items-center'>
+                <h1 className='text-2xl font-bold mr-4'>Total Cost:</h1>
+                <button className='mr-4 border border-purple-500 py-3 px-5 text-purple-500 text-lg rounded-3xl'>Sort by Price</button>
+                <button className='text-white rounded-3xl bg-purple-500 py-3 px-4 text-lg'>Purchase</button>
+                </div>      
      </div>
+  
     </div>
   )
 }

@@ -3,12 +3,15 @@ import { Outlet, useLoaderData } from 'react-router-dom'
 import Category from '../../Category/Category'
 import Banner from '../../Banner/Banner';
 import Header from '../../Header/Header';
-
+import { Helmet  } from 'react-helmet';
 export default function Home() {
     const categories = useLoaderData();
    
   return (
    <div>
+     <Helmet>
+       <title>Home</title>
+     </Helmet>
     <div className='bg-purple-500'>
       <Header></Header>
     </div>

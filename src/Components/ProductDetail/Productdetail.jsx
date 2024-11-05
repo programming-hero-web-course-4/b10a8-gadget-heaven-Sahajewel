@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { CiStar } from "react-icons/ci";
 import { GiEternalLove } from "react-icons/gi";
-import { NavLink } from 'react-router-dom';
-import Dash from '../Dash/Dash';
+// import { NavLink } from 'react-router-dom';
+import { addToCart } from '../../untils';
+import { toast } from 'react-toastify';
+
+// import Dash from '../Dash/Dash';
+// import { toast } from 'react-toastify';
 
 export default function Productdetail({detail}) {
- console.log(detail)
   
     const {product_image,product_title,price,specification,rating,description,product_id} = detail || {}
   
+const handleToAddCart = id=>{
+  addToCart(id)
+  }
   return (
     <div className='flex flex-col md:flex-row mb-20 w-8/12 mx-auto bg-gray-400 p-10'>
       <div className='w-full md:w-6/12 mr-10'>
@@ -31,7 +37,7 @@ export default function Productdetail({detail}) {
        </div>
        <h1 className='text-white font-bold text-2xl'>Rating</h1>
        <div className='flex  my-3 items-center'>
-            <div className='flex flex-col md:flex-row gap-2 mr-3 items-center text-yellow-300 text-2xl '>
+          <div className='flex flex-col md:flex-row gap-2 mr-3 items-center text-yellow-300 text-2xl '>
                  <CiStar />
                  <CiStar />
                  <CiStar />
@@ -43,13 +49,20 @@ export default function Productdetail({detail}) {
             </div>
        </div>
        <div className='flex items-center'>
-        <NavLink   to={`/dash/${product_id}`}  className='bg-purple-500 rounded-3xl px-5 py-2 text-white mr-3 text-xl hover:scale-110 duration-200'>Add To Card</NavLink>
+      <button onClick={()=>handleToAddCart(id)}     className='bg-purple-500 rounded-3xl px-5 py-2 text-white mr-3 text-xl hover:scale-110 duration-200'>Add To Card</button>
+       
         <div className='text-3xl border p-3 rounded-full text-white'>
         <GiEternalLove />
         </div>
+        {
+          toast("already")
+        }
        </div>
        
       </div>
+      
+     
     </div>
   )
 }
+// to={`/dash/${product_id}`}
