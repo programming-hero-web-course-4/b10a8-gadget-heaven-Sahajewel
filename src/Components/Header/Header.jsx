@@ -36,7 +36,7 @@ export default function Header() {
                   <NavLink className={({isActive})=>isActive?"bg-green-400 px-3 py-2 rounded-2xl text-xl mb-4": "bg-green-700 px-3 py-2 rounded-2xl text-xl mb-4"} to="/">Home</NavLink>
                   <NavLink className={({isActive})=>isActive?"bg-green-400 px-3 py-2 rounded-2xl text-xl mr-4": "bg-green-700 px-3 py-2 rounded-2xl text-xl mb-4"} to="/statistics">Statistics</NavLink>
                   <NavLink  className={({isActive})=>isActive?"bg-green-400 px-3 py-2 rounded-2xl text-xl mr-4": "bg-green-700 px-3 py-2 rounded-2xl text-xl mb-4"} to="/dashboard">Dashboard</NavLink>
-                  <NavLink  className={({isActive})=>isActive?"bg-green-400 px-3 py-2 rounded-2xl text-xl mr-4": "bg-green-700 px-3 py-2 rounded-2xl text-xl mb-4"} to="/dashboard">Contact Us</NavLink>
+                  <NavLink  className={({isActive})=>isActive?"bg-green-400 px-3 py-2 rounded-2xl text-xl mr-4": "bg-green-700 px-3 py-2 rounded-2xl text-xl mb-4"} to="/contact">Contact Us</NavLink>
                   
                   </ul>
                 </div>
