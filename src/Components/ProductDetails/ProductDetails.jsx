@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom'
 import Productdetail from '../ProductDetail/Productdetail'
 import Header from '../Header/Header'
 import { addToStoredCart, addToWishlist } from '../../untils'
-import { toast } from 'react-toastify'
+
 
 export default function ProductDetails() {
     const datas = useLoaderData()
@@ -12,12 +12,12 @@ export default function ProductDetails() {
 
     const handleToAddCart = id=>{
       addToStoredCart(id)
-      toast("product added")
+      
     }
 
     const handleToWishlist = id=>{
       addToWishlist(id);
-      toast("product added")
+      
     }
     
     useEffect(()=>{

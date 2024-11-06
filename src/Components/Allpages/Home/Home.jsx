@@ -22,7 +22,7 @@ export default function Home() {
     <h1 className='text-center text-lg md:text-2xl lg:text-4xl font-bold my-5'>Explore Cutting Edge Gadget</h1>
    {
    
-    categories.map(cate=><AllProductsAndCards key={cate.id} displayCate={cate}></AllProductsAndCards>)
+   categories.map(cate=><AllProductsAndCards key={cate.id} displayCate={cate}></AllProductsAndCards>)
    }
    <Outlet></Outlet>
    </div>

@@ -1,8 +1,9 @@
-import React, {  useEffect, useState } from 'react'
+import React, {  useContext, useEffect, useState } from 'react'
 import Header from '../../Header/Header'
 import { Helmet } from 'react-helmet'
 import { NavLink, useLoaderData } from 'react-router-dom'
 import { getStoredCart } from '../../../untils';
+import { Money } from '../../ContextCount/ContextCount';
 
 
 export default function Dashboard() {
@@ -26,7 +27,6 @@ useEffect(()=>{
   const wishlistList = allCart.filter(wishlist=>storeedWishlistToDisplayInt.includes(wishlist.product_id))
   setWishlist(wishlistList)
 },[])
-
 
 
 const HandleSort=()=>{
@@ -81,22 +81,23 @@ const showWishlist = ()=>{
              <div>
               </div>    
               <div className='flex justify-between items-center'>
-                <h1 className='text-2xl font-bold mr-4'>Total Cost:</h1>
+                <h1 className='text-2xl font-bold mr-10'>Total Cost: 0 </h1>
                 <button onClick={()=>HandleSort(cartShow)} className='mr-4 border border-purple-500 py-3 px-5 text-purple-500 text-lg rounded-3xl hover:scale-105 duration-300'>Sort by Price</button>
             
-<button className="btn btn-primary hover:bg-purple-500 duration-300" onClick={()=>document.getElementById('my_modal_1').showModal()}>Purchase</button>
-<dialog id="my_modal_1" className="modal">
-  <div className="modal-box">
-    <h3 className="font-bold text-4xl">Congratulations</h3>
-    <p className="py-4 text-green-500 text-xl">You have succssfully purchased</p>
-    <div className="modal-action">
-      <form method="dialog">
-       
-        <NavLink to="/" className="btn">Close</NavLink>
-      </form>
-    </div>
-  </div>
-</dialog>
+                  <button className="btn btn-primary hover:bg-purple-500 duration-300" onClick={()=>document.getElementById('my_modal_1').showModal()}>Purchase</button>
+                  <dialog id="my_modal_1" className="modal">
+                    <div className="modal-box">
+                      <h3 className="font-bold text-4xl">Congratulations</h3>
+                      <p className="py-4 text-green-500 text-xl">You have succssfully purchased</p>
+                      <div className="modal-action">
+                        <form method="dialog">
+                        
+                          <NavLink to="/" className="btn">Close</NavLink>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+                 
                 </div>      
      </div>
     
@@ -114,6 +115,7 @@ const showWishlist = ()=>{
        </div>
         <div>
           <button className='bg-white text-green-500 p-2 rounded-2xl hover:bg-gray-300 duration-300 '>Delete</button>
+         
         </div>
        
         </div>
