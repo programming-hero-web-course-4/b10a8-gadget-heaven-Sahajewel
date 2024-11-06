@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { CiStar } from "react-icons/ci";
 import { GiEternalLove } from "react-icons/gi";
 // import { NavLink } from 'react-router-dom';
-import { addToCart } from '../../untils';
-import { toast } from 'react-toastify';
+// import { addToCart, addToStoredCart, getAllAddToCart } from '../../untils';
+// import { toast } from 'react-toastify';
 
 // import Dash from '../Dash/Dash';
 // import { toast } from 'react-toastify';
 
-export default function Productdetail({detail}) {
+export default function Productdetail({detail,handleToAddCart,handleToWishlist}) {
+
   
     const {product_image,product_title,price,specification,rating,description,product_id} = detail || {}
   
-const handleToAddCart = id=>{
-  addToCart(id)
-  }
+
   return (
     <div className='flex flex-col md:flex-row mb-20 w-8/12 mx-auto bg-gray-400 p-10'>
       <div className='w-full md:w-6/12 mr-10'>
@@ -49,13 +48,13 @@ const handleToAddCart = id=>{
             </div>
        </div>
        <div className='flex items-center'>
-      <button onClick={()=>handleToAddCart(id)}     className='bg-purple-500 rounded-3xl px-5 py-2 text-white mr-3 text-xl hover:scale-110 duration-200'>Add To Card</button>
+      <button onClick={handleToAddCart}     className='bg-purple-500 rounded-3xl px-5 py-2 text-white mr-3 text-xl hover:scale-110 duration-200'>Add To Card</button>
        
-        <div className='text-3xl border p-3 rounded-full text-white'>
+        <div onClick={handleToWishlist} className='text-3xl border p-3 rounded-full text-white'>
         <GiEternalLove />
         </div>
         {
-          toast("already")
+         
         }
        </div>
        

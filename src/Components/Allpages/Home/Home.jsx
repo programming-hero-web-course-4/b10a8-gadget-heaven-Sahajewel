@@ -1,9 +1,10 @@
 import React from 'react'
 import { Outlet, useLoaderData } from 'react-router-dom'
-import Category from '../../Category/Category'
+// import Category from '../../Category/Category'
 import Banner from '../../Banner/Banner';
 import Header from '../../Header/Header';
 import { Helmet  } from 'react-helmet';
+import AllProductsAndCards from '../../AllProductsAndCards/AllProductsAndCards';
 export default function Home() {
     const categories = useLoaderData();
    
@@ -20,7 +21,8 @@ export default function Home() {
    </div>
     <h1 className='text-center text-lg md:text-2xl lg:text-4xl font-bold my-5'>Explore Cutting Edge Gadget</h1>
    {
-    categories.map(cate=><Category key={cate.id} displayCate={cate}></Category>)
+   
+    categories.map(cate=><AllProductsAndCards key={cate.id} displayCate={cate}></AllProductsAndCards>)
    }
    <Outlet></Outlet>
    </div>

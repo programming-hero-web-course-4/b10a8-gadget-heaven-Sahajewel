@@ -1,9 +1,12 @@
 import React from 'react'
 import Header from '../../Header/Header'
-
+import { Helmet } from 'react-helmet'
 export default function ContactUs() {
   return (
     <div>
+         <Helmet>
+       <title>Contact Us</title>
+     </Helmet>
         <Header></Header>
         <div className='bg-purple-500'>
      <div className="hero  text-center ">

@@ -2,11 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 import Productdetail from '../ProductDetail/Productdetail'
 import Header from '../Header/Header'
+import { addToStoredCart, addToWishlist } from '../../untils'
+import { toast } from 'react-toastify'
 
 export default function ProductDetails() {
     const datas = useLoaderData()
     const {id} = useParams()
     const [detail, setDetail] = useState()
+
+    const handleToAddCart = id=>{
+      addToStoredCart(id)
+      toast("product added")
+    }
+
+    const handleToWishlist = id=>{
+      addToWishlist(id);
+      toast("product added")
+    }
     
     useEffect(()=>{
         const findData = datas.find(data=>data.product_id== id)
@@ -35,7 +47,7 @@ export default function ProductDetails() {
     </div>
      <div className='absolute top-[300px] mx-auto '>
       {
-        <Productdetail detail={detail}></Productdetail>
+        <Productdetail handleToAddCart={()=>handleToAddCart(id)} handleToWishlist={()=>handleToWishlist(id)} detail={detail}></Productdetail>
       }
        
     </div>

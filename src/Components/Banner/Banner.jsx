@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from "./banner.jpg"
+import { NavLink } from 'react-router-dom'
 export default function Banner() {
   return (
     <div className="hero  text-center pb-[200px] mb-[200px] md:pb-[300px] md:mb-[300px] lg:pb-[400px] lg:mb-[700px] ">
@@ -11,7 +12,7 @@ export default function Banner() {
                   <p className="py-6 text-white">
                     Explore the latest gadget that will take your experience to the next level. From smart dvices to the coolest accessories, we have it all!
                   </p>
-                  <button onClick={()=>navigate("/dashboard")} className="btn btn-success text-white text-lg">Shop Now</button>
+                  <NavLink to="/dashboard" className="btn btn-success text-white text-lg">Shop Now</NavLink>
                 </div>
                
                 </div>
